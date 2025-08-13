@@ -76,5 +76,5 @@ Se necesita anticipar fallas críticas para optimizar la operación, reducir par
 ---
 
 ## Recursos Adicionales
-- [Presentación completa del proyecto](docs/Presentación%20Pr.%20Chancador.pdf.pdf)  
+- [Presentación completa del proyecto](docs/Presentación%20Pr.%20Chancador.pdf)  
 - Notebooks con código y análisis en la carpeta `notebooks/`
