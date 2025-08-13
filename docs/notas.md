@@ -1,1 +1,1 @@
-Capturas de resultados y visualizaciones
+Visualizaciones y métricas de resultados
