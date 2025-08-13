@@ -1,0 +1,1 @@
+No subir datos reales aquí. Usar solo para muestras pequeñas.

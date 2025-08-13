@@ -1,0 +1,1 @@
+- Boceto de arquitectura, decisiones y próximos pasos.
