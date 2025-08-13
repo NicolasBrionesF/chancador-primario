@@ -1,4 +1,5 @@
 # Mantenimiento Predictivo para Chancador Primario
+
 ## Contexto
 Este proyecto fue desarrollado con datos reales de operación minera, con frecuencia de 15 segundos por sensor.  
 Se necesita anticipar fallas críticas para optimizar la operación, reducir paradas no programadas y disminuir costos de mantenimiento.
@@ -42,28 +43,38 @@ Se necesita anticipar fallas críticas para optimizar la operación, reducir par
 
 ---
 
-## Resultados (placeholder)
-> [---PENDIENTE---]
+## Imágenes Clave
 
-| Modelo        | AUC-PR | Anticipación media (min) | Falsas alarmas/día |
-|---------------|--------|--------------------------|--------------------|
-| LSTM          | 0.XX   | XX                       | XX                 |
-| Random Forest | 0.XX   | XX                       | XX                 |
-| XGBoost       | 0.XX   | XX                       | XX                 |
+**Componentes de la Solución**
+![Componentes](docs/figs/componentes_solucion.png)
+
+**Análisis de Comportamiento de Datos**
+![Comportamiento de Datos](docs/figs/Analisis_fallas.png)
 
 ---
 
-## Reproducción del proyecto
-```bash
-# Crear entorno virtual
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+## Resultados – Top 3 Sensores (Average Precision)
 
-# Instalar dependencias
-pip install -r requirements.txt
+| Sensor | AP | F1 (umbral óptimo) | Umbral | TN | FP | FN | TP |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `CNN-3200-PIT32043.PV` | 0.964 | 0.911 | 0.65 | 21920 | 331 | 2352 | 13778 |
+| `CNN-3200-PIT32056.PV` | 0.951 | 0.890 | 0.67 | 21820 | 431 | 2856 | 13274 |
+| `CNN-3200-CR_0001_MO.CUR` | 0.950 | 0.885 | 0.67 | 21875 | 376 | 3018 | 13112 |
 
-# Entrenar modelo
-python scripts/train.py --config configs/experiment_baseline.yaml
+**CNN-3200-PIT32043.PV**  
+![PR Curve](docs/figs/pr_curve_CNN-3200-PIT32043_PV.png)  
+![Confusion Matrix](docs/figs/cm_CNN-3200-PIT32043_PV.png)
 
-# Evaluar modelo
-python scripts/evaluate.py --config configs/experiment_baseline.yaml
+**CNN-3200-PIT32056.PV**  
+![PR Curve](docs/figs/pr_curve_CNN-3200-PIT32056_PV.png)  
+![Confusion Matrix](docs/figs/cm_CNN-3200-PIT32056_PV.png)
+
+**CNN-3200-CR_0001_MO.CUR**  
+![PR Curve](docs/figs/pr_curve_CNN-3200-CR_0001_MO_CUR.png)  
+![Confusion Matrix](docs/figs/cm_CNN-3200-CR_0001_MO_CUR.png)
+
+---
+
+## Recursos Adicionales
+- [Presentación completa del proyecto](docs/Presentación%20Pr.%20Chancador.pdf.pdf)  
+- Notebooks con código y análisis en la carpeta `notebooks/`
