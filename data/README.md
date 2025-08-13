@@ -1,1 +1,1 @@
-No subir datos reales aquí. Usar solo para muestras pequeñas.
+Solo una muestra del formato. Los datos reales son de gran tamaño.
