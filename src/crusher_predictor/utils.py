@@ -1,1 +1,0 @@
-# Utilidades varias (logging, seeds, etc.)
